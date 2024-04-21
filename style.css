@@ -1,0 +1,157 @@
+@import "https://unpkg.com/open-props" layer(design.system);
+
+@layer demo {
+  fieldset {
+    grid-template-columns: repeat(3,auto);
+    
+    @media (prefers-reduced-motion: no-preference) {
+      label {
+        transition:  2s var(--ease-spring-5);
+      }
+    }
+    > label {
+      background: var(--_img) 50%/cover;
+      width: 0;
+      min-width: 100%;
+    }
+    > label:has(input:checked) {
+      width: 22vw;
+    }
+    > label:has(input:checked) + *
+    /*> label:has(+ label:has(input:checked)) */{
+      width: 8vw;
+    }
+    /* a hacky way to get all the cases*/
+    &:has(label:nth-child(2) > input:checked) label:nth-child(1),
+    &:has(label:nth-child(3) > input:checked) label:nth-child(2){
+      width: 8vw;
+    }
+  }
+}
+
+@layer demo.support {
+  html {
+    background: var(--gradient-9);
+    block-size: 100%;
+  }
+  
+  body {
+    min-block-size: 100%;
+    display: grid;
+    place-content: center;
+    padding: var(--size-5);
+    gap: var(--size-5);
+  }
+  
+  fieldset {
+    inline-size: 80vw;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 50vh;
+    gap: var(--size-3);
+    border: none;
+    
+    > label {
+      cursor: pointer;
+      border-radius: var(--radius-4);
+      
+      &:focus-within {
+        outline: 1px solid Highlight;
+        outline-offset: 5px;
+      }
+      
+      > input {
+        opacity: 0;
+      }
+    }
+  }
+}
+.Textynaklik p {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.Textynaklik p:active {
+    transform: scale(1.2); /* Scales up the text when clicked */
+}
+.Textynaklik{
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--size-3);
+}
+html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Varela Round", sans-serif;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background-color: #a8b741;
+  }
+  .navkontakt::before {
+    text-decoration: none;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #acba4a;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .navkontakt:hover {
+    color: black;
+    transition: all 0.3s ease;
+  }
+  .navkontakt {
+    text-decoration: none;
+    position: relative;
+    font-size: 1.5rem;
+    float: right;
+    text-decoration: none;
+    color: #000;
+  }
+  .navkontakt:hover {
+    text-decoration: none;
+    position: relative;
+  }
+  .navkontakt:hover::before {
+    text-decoration: none;
+    width: 100%;
+  }
+  .conto {
+    background-color: transparent;
+  }
+  .top {
+    transition: background 0.3s ease;
+  }
+  .textos {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }  
+  .titel {
+    font-size: 2rem;
+    font-weight: 70;
+    color: black;
+  }
+  .citkus:hover {
+    box-shadow: 0px 0px 15px black;
+    transition: box-shadow 0.5s ease;
+  }
+  .foot-link::before {
+    text-decoration: none;
+    color: black;
+  }
+  .foot-link {
+    text-decoration: none;
+    color: black;
+  }
+  .foot-link::after {
+    text-decoration: none;
+    color: black;
+  }
+ 
+  
