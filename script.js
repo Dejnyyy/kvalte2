@@ -2,20 +2,32 @@ function selectImage(id) {
     const radio = document.querySelector(id);
     radio.checked = true;
     // Trigger the radio change event if needed
-}
-document.addEventListener('DOMContentLoaded', function () {
+}document.addEventListener('DOMContentLoaded', function () {
+    // Attaching change event listeners to each radio button
     const radios = document.querySelectorAll('input[type="radio"][name="images"]');
+    document.getElementById('DomyText').addEventListener('click', function() {
+        updateContentVisibility('contentDomy');
+    });
+    document.getElementById('RekonstrukceText').addEventListener('click', function() {
+        updateContentVisibility('contentRekonstrukce');
+    });
+    document.getElementById('SlabLiftText').addEventListener('click', function() {
+        updateContentVisibility('contentSlabLift');
+    });
     radios.forEach(radio => {
         radio.addEventListener('change', function () {
             updateContentVisibility();
         });
     });
 
+    // Update content visibility based on the checked radio button
     function updateContentVisibility() {
+        // Hide all contents
         document.getElementById('contentDomy').style.display = 'none';
         document.getElementById('contentRekonstrukce').style.display = 'none';
         document.getElementById('contentSlabLift').style.display = 'none';
 
+        // Show the content corresponding to the checked radio button
         if (document.getElementById('Domy').checked) {
             document.getElementById('contentDomy').style.display = 'block';
         } else if (document.getElementById('Rekonstrukce').checked) {
@@ -25,7 +37,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Initial content visibility update
-    updateContentVisibility();
 });
-
