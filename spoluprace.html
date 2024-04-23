@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="spoluprace.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,13 +20,13 @@
             justify-content: space-around;
         }
 
-        .step {
-            width: 30%;
+        
+        .step{
+            width: 60%;
+            margin-top:2rem;
         }
-
         .icon {
             font-size: 48px;
-            /* Placeholder size */
         }
 
         .step-title {
@@ -53,17 +55,17 @@
         </div>
     </div>
     <section id="Processpoluprace">
-        <div>  <h1 class="text-center mt-5">Proces Spolupráce</h1></div>
-        <div class="container">
-          
-            <div class="step">
+        <div>  <h1 class="text-center mt-5 text-4xl my-10">Proces Spolupráce</h1></div>
+        <div class="">
+          <div class="grid grid-cols-1 md:grid-cols-3">
+            <div class="step mx-auto">
                 <div class="icon">👥</div>
                 <div class="step-title">Úvodní setkání</div>
                 <div class="step-description">
                     Na první schůze s Vámi projednáme Vaše představy a můžeme navrhnout i naše řešení a doporučení.
                 </div>
             </div>
-            <div class="step">
+            <div class="step mx-auto">
                 <div class="icon">🖥️</div>
                 <div class="step-title">Prvotní návrh</div>
                 <div class="step-description">
@@ -72,13 +74,48 @@
                     stavebního povolení.
                 </div>
             </div>
-            <div class="step">
+            <div class="step mx-auto">
                 <div class="icon">🤝</div>
                 <div class="step-title">Uzavření smlouvy</div>
                 <div class="step-description">
                     V případě Vašeho zájmu a odladění rozpočtu uzavřeme smlouvu o dílo. Po uzavření smlouvy platíte 30%
                     smluvní ceny, jako zálohu na práce a materiál.
                 </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3">
+                <div class="step mx-auto">
+                    <div class="icon">🏠</div>
+                    <div class="step-title">Provedení stavby</div>
+                    <div class="step-description">
+                        Provedeme stavbu v domluveném rozsahu. Na stavbě je čisto a práce mají svůj logický sled. Při dokončení ve smluvě dohodnuté pracovní etapy zaplatíte dalších 30% smluvní ceny.
+                    </div>
+                </div>
+                <div class="step mx-auto">
+                    <div class="icon">🔑</div>
+                    <div class="step-title">Předání</div>
+                    <div class="step-description">
+                        Dílo předáme v dohodnutém termínu. V předávacím protokolu jsou uvedeny případné vady a přání klienta.
+                    </div>
+                </div>
+                <div class="step mx-auto">
+                    <div class="icon">🔧</div>
+                    <div class="step-title">Odstranění vad</div>
+                    <div class="step-description">
+                        Do dohodnutého termínu dle předávacího protokolu odstraníme případné vady a nedodělky a také další práce na přání klienta, které se během stavby mohou objevit.
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <div></div>
+                <div class="step mx-auto">
+                    <div class="icon">💰</div>
+                    <div class="step-title">Doplatek smluvní ceny</div>
+                    <div class="step-description">
+                        Po kompletním dokončení a předání bez vad doplatíte poslední doplatek 40% ze smluvní ceny.
+                    </div>
+                </div>
+                <div></div>
             </div>
         </div>
     </section>
