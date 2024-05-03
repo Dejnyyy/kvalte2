@@ -38,3 +38,12 @@ function selectImage(id) {
     }
 
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.clickable-image');
+    images.forEach(img => {
+        img.addEventListener('click', function () {
+            images.forEach(i => i.classList.remove('active-image'));
+            img.classList.add('active-image');
+        });
+    });
+});

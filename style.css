@@ -133,4 +133,9 @@ html {
     margin-left: 10rem;
     margin-right: 10rem;
   }  
-  
+  .active-image {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    transition: width 0.3s ease-in-out;
+}
