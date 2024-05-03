@@ -42,8 +42,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('.clickable-image');
     images.forEach(img => {
         img.addEventListener('click', function () {
-            images.forEach(i => i.classList.remove('active-image'));
-            img.classList.add('active-image');
+            if (img.classList.contains('active-image')) {
+                img.classList.remove('active-image');
+            } else {
+                // Otherwise, remove the class from all other images and add it to the clicked image
+                images.forEach(i => i.classList.remove('active-image'));
+                img.classList.add('active-image');
+            }
         });
     });
 });

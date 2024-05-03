@@ -134,8 +134,8 @@ html {
     margin-right: 10rem;
   }  
   .active-image {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
+    width: 50vw; /* Sets the width to 50% of the viewport width */
     transition: width 0.3s ease-in-out;
+    position:absolute;
+    left: 25%;
 }
