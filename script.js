@@ -26,7 +26,6 @@ function selectImage(id) {
         document.getElementById('contentDomy').style.display = 'none';
         document.getElementById('contentRekonstrukce').style.display = 'none';
         document.getElementById('contentSlabLift').style.display = 'none';
-
         // Show the content corresponding to the checked radio button
         if (document.getElementById('Domy').checked) {
             document.getElementById('contentDomy').style.display = 'block';
